@@ -1,12 +1,14 @@
-//DELETE http://localhost:5000/api/dogs?id=628e55f22de59ee9f731aedd
-
 GET http://localhost:5000/api/dogs
 
 ###
-PUT http://localhost:5000/api/dogs/628fdc40102ac8b598db6eed
+PUT http://localhost:5000/api/dogs/628fdc32102ac8b598db6eeb
 Content-Type: application/json
-{"_id":"628fdc40102ac8b598db6eed","name":"MyFino_2","birthDate":"1999911"}
+{"_id":"628fdc32102ac8b598db6eeb","name":"FInoFino","birthDate":"55555555"}
 
+###
+PUT http://localhost:5000/api/dogs/628fdc9c712cb900d5aa93ad
+Content-Type: application/json
+{"_id":"628fdc9c712cb900d5aa93ad","name":"KKKKK","birthDate":"1999911","createdAt":"2022-05-26T20:01:32.441Z","updatedAt":"2022-06-04T19:42:46.522Z","__v":0}
 
 //PUT http://localhost:5000/api/dogs?id=628e55f22de59ee9f731aedd
 //Content-type: application/x-www-form-urlencoded
@@ -19,3 +21,21 @@ Content-Type: application/json
 POST http://localhost:5000/api/dogs
 Content-Type: application/json
 { 'name' : 'Kimsa_99', 'birthDate': 19891'}
+
+###
+POST http://localhost:5000/api/dogs/6294fd8833512ba3a7899639
+Content-Type: application/json
+
+{
+  "_id": "6294fd8833512ba3a7899639",
+  "name": "MyFino",
+  "birthDate": "111111_2 "
+}
+
+###
+DELETE http://localhost:5000/api/dogs
+Content-Type: application/json
+
+{
+  "id": "629088e624233c0ce954e7d3"
+}

@@ -1,6 +1,7 @@
 const asyncHandler = require('express-async-handler')
 
 const Dog = require('../models/dogModel')
+
 // @desc  Get entries for all dogs
 // @route GET /api/dogs
 // @access Private
@@ -14,7 +15,7 @@ const getDogs = asyncHandler(async (req, res) => { // async is used since mongoo
 // @access Private
 const setDog = asyncHandler(async (req, res) => {
     if (!req.body.name) {
-        throw new Error('Dog name should be specified');
+        throw new Error('Dog name should be specified, annars smäller det');
     }
     const dog = await Dog.create({
         name: req.body.name,
@@ -22,7 +23,6 @@ const setDog = asyncHandler(async (req, res) => {
     })
     res.status(200).json(dog)
 })
-
 
 // @desc  Update a dog entry
 // @route PUT /api/dogs/:id

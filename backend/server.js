@@ -19,13 +19,6 @@ app.use(express.urlencoded({extended: false}))
 
 app.use('/api/dogs', require('./routes/dogRoutes'))
 app.use(errorHandler)
-/*
-Moved to routes instead
-// getting all subcscribers
-app.get('/api/dogs', (req, res) => {
-    //res.send('get all dogs')
-    res.status(200).json({ message: 'Get all dogs'})
-})
-*/
+
 
 app.listen(port,() => console.log(`Server started on port ${port}`))
